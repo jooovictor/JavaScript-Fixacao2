@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixação 4</title>
+</head>
+<body>
+    <script>
+        // (( x * x1) + (y * y1)) / (x1 + y1)
+
+        function calcula_media_ponderada(x, x1, y, y1) {
+            let nota1 = ( x * x1) 
+            let nota2 = (y * y1)
+            let nota_final = calcula_produto(nota1, nota2);
+            let peso_final = calcula_produto(x1, y1);
+            return nota_final / peso_final;
+
+        }
+
+        function calcula_produto(x, y) {
+            return x + y;
+        }
+        
+        function aluno (texto) {
+            let matricula = parseInt(prompt('Matricula do aluno: '));
+            let x1 = parseInt(prompt('Peso da primeira prova: '));
+            let y1 = parseInt(prompt('Peso da segunda prova: '));
+            let x = parseFloat(prompt('Nota da primeira prova: '));
+            let y = parseFloat(prompt('Nota da segunda prova: '));
+
+            return
+            console.log(' ------------- ')
+            console.log(texto);
+            console.log('Matricula: ' + matricula);
+            console.log('Média: ' + parseFloat(calcula_media_ponderada(x, x1, y, y1)).toFixed(2));
+            console.log(' ------------- ')
+            
+        }
+
+        aluno(prompt('Nome do primeiro aluno: '));
+        aluno(prompt('Nome do segundo aluno: '));
+
+        /* let matricula = parseInt(prompt('Matricula do aluno: '));
+        let x1 = parseInt(prompt('Peso da primeira prova: '));
+        let y1 = parseInt(prompt('Peso da segunda prova: '));
+        let x = parseFloat(prompt('Nota da primeira prova: '));
+        let y = parseFloat(prompt('Nota da segunda prova: '));
+
+        console.log('Matricula: ' + matricula);
+        console.log('Média: ' + parseFloat(calcula_media_ponderada(x, x1, y, y1)).toFixed(2)); 
+        */
+    </script>
+</body>
+</html>

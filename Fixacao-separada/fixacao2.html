@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media ponderada</title>
+</head>
+<body>
+    <script>
+        function calcula_media_ponderada(x, x1, y, y1) {
+            return (( x * x1) + (y * y1)) / (x1 + y1)
+        }
+        
+        let matricula = parseInt(prompt('Matricula do aluno: '));
+        let x1 = parseInt(prompt('Peso da primeira prova: '));
+        let y1 = parseInt(prompt('Peso da segunda prova: '));
+        let x = parseFloat(prompt('Nota da primeira prova: '));
+        let y = parseFloat(prompt('Nota da segunda prova: '));
+
+        console.log('Matricula: ' + matricula);
+        console.log('Média: ' + parseFloat(calcula_media_ponderada(x, x1, y, y1)).toFixed(2));
+
+        </script>
+</body>
+</html>

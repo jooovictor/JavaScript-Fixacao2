@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixação 6</title>
+</head>
+<body>
+    <script>
+        /*
+        6 - Implemente, utilizando funções, um programa que receba do usuário o valor do salário bruto de um funcionário e imprima o valor com descontos de INSS, FGTS e Plano de Saúde. 
+        O programa deve utilizar uma função para calcular cada um dos descontos, 
+        sendo que estas funções devem receber o valor do salário bruto e retornar o valor a ser descontado. Os valores descontados devem ser:
+
+        - INSS: 10% do valor bruto;
+        - FGTS: 8%;
+        - Plano de Saúde: R$100,00
+
+        */
+        function inss_desconto(x) {
+            inss = x * 0.10;
+            console.log('Valor a ser descontado pelo inss: ' + inss)
+            return x - inss;
+        }
+
+        function fgts_desconto(x) {
+            fgts = x * 0.08;
+            console.log('Valor a ser descontado pelo fgts: ' + fgts)
+            return x - fgts;
+        }
+
+        function saude_desconto(x) {
+            const plano_de_saude = 100;
+            console.log('Valor a ser descontado pelo plano de saúde: ' + plano_de_saude)
+            return x - plano_de_saude;
+
+        }
+        let valor_bruto = parseFloat(prompt('Valor bruto: '));
+        console.log('Valor bruto final: ' + inss_desconto(valor_bruto));
+        console.log('Valor bruto final: ' + fgts_desconto(valor_bruto));
+        console.log('Valor bruto final: ' + saude_desconto(valor_bruto));
+    
+
+    </script>
+</body>
+</html>

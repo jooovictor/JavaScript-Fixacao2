@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calcula_produto(x, y) {
+            return x + y;
+        }
+
+        function calcula_media(x, y) {
+            return (x + y) / 2;
+        }
+        
+        function fixacao1(texto) {
+            let x = parseInt(prompt('numero'));
+            let y = parseInt(prompt('numero2'));
+            console.log('A média dos numeros: ' + calcula_media(x, y));
+            console.log('O produto dos numeros: ' + calcula_produto(x, y));
+            return console.log('^----Fixação 1----^');
+        }
+
+        fixacao1(1);
+    </script>
+</body>
+</html>

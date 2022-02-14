@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Fixação JavaScript2 </title>
+</head>
+<body>
+    <script>
+        // Primeiro exercicio fixação 1
+
+        function calcula_produto(x, y) {
+            return x + y;
+        }
+
+        function calcula_media(x, y) {
+            return (x + y) / 2;
+        }
+        
+        function fixacao1() {
+            let x = parseInt(prompt('Primeiro numero inteiro: '));
+            let y = parseInt(prompt('Segundo numero inteiro: '));
+            console.log('A média dos numeros: ' + calcula_media(x, y));
+            console.log('O produto dos numeros: ' + calcula_produto(x, y));
+            return console.log('^----Fixação 1----^');
+        }
+
+        alert('Fixação 1');
+        fixacao1();
+
+        // Segundo exercicio fixação 2
+
+        function calcula_media_ponderada_bruta(x, x1, y, y1) {
+            return (( x * x1) + (y * y1)) / (x1 + y1);
+        }
+        
+        function fixacao2() {
+            let matricula = parseInt(prompt('Matricula do aluno: '));
+            let x1 = parseInt(prompt('Peso da primeira prova: '));
+            let y1 = parseInt(prompt('Peso da segunda prova: '));
+            let x = parseFloat(prompt('Nota da primeira prova: '));
+            let y = parseFloat(prompt('Nota da segunda prova: '));
+
+            console.log('Matricula: ' + matricula);
+            console.log('Média: ' + parseFloat(calcula_media_ponderada_bruta(x, x1, y, y1)).toFixed(2));
+            return console.log('^----Fixação 2----^');
+        }
+
+        alert('Fixação 2');
+        fixacao2() 
+
+        // Terceito exercicio fixação 3
+
+        function calcula_media_ponderada(x, x1, y, y1) {
+            let nota1 = ( x * x1) 
+            let nota2 = (y * y1)
+            let nota_final = calcula_produto(nota1, nota2);
+            let peso_final = calcula_produto(x1, y1);
+            return nota_final / peso_final;
+
+        }
+
+        function fixacao3() {
+            let matricula = parseInt(prompt('Matricula do aluno: '));
+            let x1 = parseInt(prompt('Peso da primeira prova: '));
+            let y1 = parseInt(prompt('Peso da segunda prova: '));
+            let x = parseFloat(prompt('Nota da primeira prova: '));
+            let y = parseFloat(prompt('Nota da segunda prova: '));
+
+            console.log('Matricula: ' + matricula);
+            console.log('Média: ' + parseFloat(calcula_media_ponderada(x, x1, y, y1)).toFixed(2));
+            return console.log('^----Fixação 3----^');
+        }
+
+        alert('Fixação 3');
+        fixacao3();
+
+        //Quarta exercicio fixação 4
+
+        function aluno (texto) {
+            let matricula = parseInt(prompt('Matricula do aluno: '));
+            let x1 = parseInt(prompt('Peso da primeira prova: '));
+            let y1 = parseInt(prompt('Peso da segunda prova: '));
+            let x = parseFloat(prompt('Nota da primeira prova: '));
+            let y = parseFloat(prompt('Nota da segunda prova: '));
+
+            console.log(' ------------- ')
+            console.log(texto);
+            console.log('Matricula: ' + matricula);
+            console.log('Média: ' + parseFloat(calcula_media_ponderada(x, x1, y, y1)).toFixed(2));
+            console.log(' ------------- ')
+            return;
+        }
+
+        function fixacao4() {
+            aluno(prompt('Nome do primeiro aluno: '));
+            aluno(prompt('Nome do segundo aluno: '));
+            return console.log('^----Fixação 4----^');
+        }
+
+        alert('Fixação 4');
+        fixacao4();
+
+        //Quinto exercicio fixação 5
+
+        function gasto(x) {
+            let servico = x * 0.10;
+            let valor_total = x + servico;
+            return valor_total;
+        }
+
+        function fixacao5() {
+            let conta = parseFloat(prompt('Valor da conta do cliente: '));
+            console.log('O valor total a ser pago pelo cliente é: ' + gasto(conta));
+            return console.log('^----Fixação 5----^');
+
+        }
+
+        alert('Fixação 5');
+        fixacao5();
+
+        // Sexto exercicio de fixação 6
+
+        function inss_desconto(x) {
+            inss = x * 0.10;
+            console.log('Valor a ser descontado pelo inss: ' + inss + '$')
+            return x - inss;
+        }
+
+        function fgts_desconto(x) {
+            fgts = x * 0.08;
+            console.log('Valor a ser descontado pelo fgts: ' + fgts + '$')
+            return x - fgts;
+        }
+
+        function saude_desconto(x) {
+            const plano_de_saude = 100;
+            console.log('Valor a ser descontado pelo plano de saúde: ' + plano_de_saude + '$')
+            return x - plano_de_saude;
+
+        }
+
+        function fixacao6 () {
+            let valor_bruto = parseFloat(prompt('Valor bruto: '));
+            console.log('Valor bruto final: ' + inss_desconto(valor_bruto) + '$');
+            console.log('Valor bruto final: ' + fgts_desconto(valor_bruto) + '$');
+            console.log('Valor bruto final: ' + saude_desconto(valor_bruto) + '$');
+            return console.log('^----Fixação 6----^');
+        }
+
+
+        alert('Fixação 6');
+        fixacao6();
+    </script>
+</body>
+</html>
